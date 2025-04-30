@@ -1,7 +1,8 @@
 import { createServerResponseAdapter } from "@/lib/server-response-adapter";
 import { mcpHandler } from "../mcp";
 
-export const maxDuration = 60;
+// Increase timeout from 60 to 300 seconds (5 minutes)
+export const maxDuration = 300;
 
 export async function GET(req: Request) {
   return createServerResponseAdapter(req.signal, (res) => {

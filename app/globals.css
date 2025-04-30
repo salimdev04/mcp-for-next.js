@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: white;
+}
+
+@layer base {
+  h1 {
+    @apply text-2xl font-bold mb-4;
+  }
+  h2 {
+    @apply text-xl font-semibold mb-3;
+  }
+  button {
+    @apply px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors;
+  }
+  input, textarea {
+    @apply border border-gray-300 rounded px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500;
+  }
+  .card {
+    @apply bg-white p-6 rounded-lg shadow-md;
+  }
+}
+
+@layer components {
+  .card {
+    @apply p-6 bg-white rounded-lg border border-gray-200 shadow-sm mb-6;
+  }
+  
+  .wallet-btn {
+    @apply px-4 py-2 rounded font-medium transition-colors;
+  }
+  
+  .wallet-btn-primary {
+    @apply wallet-btn bg-blue-500 text-white hover:bg-blue-600;
+  }
+  
+  .wallet-btn-secondary {
+    @apply wallet-btn bg-gray-200 text-gray-700 hover:bg-gray-300;
+  }
+  
+  .wallet-input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  }
+  
+  .wallet-label {
+    @apply block mb-1 text-sm font-medium text-gray-700;
+  }
+  
+  .wallet-card {
+    @apply p-4 rounded-lg border;
+  }
+  
+  .wallet-card-success {
+    @apply wallet-card bg-green-50 border-green-200;
+  }
+  
+  .wallet-card-info {
+    @apply wallet-card bg-blue-50 border-blue-200;
+  }
+  
+  .wallet-card-warning {
+    @apply wallet-card bg-yellow-50 border-yellow-200;
+  }
+}

@@ -5,4 +5,4 @@ const nextConfig = {
   transpilePackages: ['@modelcontextprotocol/sdk'],
 };
 
-export default nextConfig;
+module.exports = nextConfig;
